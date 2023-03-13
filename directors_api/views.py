@@ -78,3 +78,9 @@ class DirectorDetail(generics.GenericAPIView):
 
         director.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class DirectorFilter(generics.ListAPIView):
+    serializer_class = DirectorSerializer
+
+    def get_queryset(self):
+        return DirectorModel.objects.filter(name__contains=self.kwargs['val'])

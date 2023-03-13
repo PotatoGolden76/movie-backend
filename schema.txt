@@ -1,0 +1,423 @@
+openapi: 3.0.2
+info:
+  title: 'm'
+  version: '1'
+paths:
+  /api/movies/:
+    get:
+      operationId: listMovieModels
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Movie'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createMovieModel
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movie'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Movie'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Movie'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+          description: ''
+      tags:
+      - api
+  /api/movies/{id}:
+    get:
+      operationId: retrieveMovieModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this movie model.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateMovieModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this movie model.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movie'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Movie'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Movie'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyMovieModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this movie model.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/directors/:
+    get:
+      operationId: listDirectorModels
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Director'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createDirectorModel
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Director'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Director'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Director'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Director'
+          description: ''
+      tags:
+      - api
+  /api/directors/{id}:
+    get:
+      operationId: retrieveDirectorModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this director model.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Director'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateDirectorModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this director model.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Director'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Director'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Director'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Director'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyDirectorModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this director model.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/directors/filter/{val}:
+    get:
+      operationId: retrieveDirector
+      description: ''
+      parameters:
+      - name: val
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Director'
+          description: ''
+      tags:
+      - api
+  /api/actors/:
+    get:
+      operationId: listActorModels
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Actor'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createActorModel
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Actor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Actor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Actor'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Actor'
+          description: ''
+      tags:
+      - api
+  /api/actors/{id}:
+    get:
+      operationId: retrieveActorModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this actor model.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Actor'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateActorModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this actor model.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Actor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Actor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Actor'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Actor'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyActorModel
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this actor model.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    Movie:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+          maxLength: 255
+        genre:
+          type: string
+          nullable: true
+          maxLength: 100
+        releaseDate:
+          type: string
+          format: date-time
+        language:
+          type: string
+          nullable: true
+          maxLength: 100
+        rating:
+          type: integer
+          maximum: 10
+          minimum: 1
+        director:
+          type: string
+          nullable: true
+      required:
+      - title
+      - releaseDate
+    Director:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        age:
+          type: integer
+        birthDate:
+          type: string
+          format: date-time
+        deathDate:
+          type: string
+          format: date-time
+        nationality:
+          type: string
+          nullable: true
+          maxLength: 100
+      required:
+      - name
+      - birthDate
+    Actor:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 255
+        age:
+          type: integer
+        birthDate:
+          type: string
+          format: date-time
+        deathDate:
+          type: string
+          format: date-time
+        nationality:
+          type: string
+          nullable: true
+          maxLength: 100
+      required:
+      - name
+      - birthDate
