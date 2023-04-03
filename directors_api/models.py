@@ -8,7 +8,7 @@ class DirectorModel(models.Model):
     name = models.CharField(max_length=255, unique=True)
     age = models.IntegerField(null=False, blank=True)
     birthDate = models.DateTimeField(null=False, blank=False)
-    deathDate = models.DateTimeField(null=False, blank=True)
+    deathDate = models.DateTimeField(null=True, blank=True)
     nationality = models.CharField(max_length=100, null=True, blank=True)
     
     class Meta:

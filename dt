@@ -1,0 +1,284 @@
+digraph model_graph {
+  // Dotfile by Django-Extensions graph_models
+  // Created: 2023-03-28 09:44
+  // Cli Options: --dot movies_api actors_api roles_api directors_api --output dt
+
+  fontname = "Roboto"
+  fontsize = 8
+  splines  = true
+  rankdir = "TB"
+
+  node [
+    fontname = "Roboto"
+    fontsize = 8
+    shape = "plaintext"
+  ]
+
+  edge [
+    fontname = "Roboto"
+    fontsize = 8
+  ]
+
+  // Labels
+
+
+  movies_api_models_MovieModel [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+    <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+    MovieModel
+    </B></FONT></TD></TR>
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>id</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>UUIDField</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>director</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">genre</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">language</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">rating</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">IntegerField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">releaseDate</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">DateTimeField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">title</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+    </TABLE>
+    >]
+
+
+
+
+  actors_api_models_ActorModel [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+    <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+    ActorModel
+    </B></FONT></TD></TR>
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>id</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>UUIDField</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">age</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">IntegerField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">birthDate</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">DateTimeField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">deathDate</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">name</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">nationality</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+    </TABLE>
+    >]
+
+
+
+
+  roles_api_models_RoleModel [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+    <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+    RoleModel
+    </B></FONT></TD></TR>
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>id</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>UUIDField</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>actor</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>movie</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">character_name</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">pay</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">IntegerField</FONT>
+    </TD></TR>
+  
+  
+    </TABLE>
+    >]
+
+
+
+
+  directors_api_models_DirectorModel [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+    <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+    DirectorModel
+    </B></FONT></TD></TR>
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>id</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>UUIDField</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">age</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">IntegerField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">birthDate</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">DateTimeField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">deathDate</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">DateTimeField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">name</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">nationality</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
+    </TD></TR>
+  
+  
+    </TABLE>
+    >]
+
+
+
+
+  // Relations
+
+  movies_api_models_MovieModel -> directors_api_models_DirectorModel
+  [label=" director (moviemodel)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+
+
+  roles_api_models_RoleModel -> movies_api_models_MovieModel
+  [label=" movie (rolemodel)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  roles_api_models_RoleModel -> actors_api_models_ActorModel
+  [label=" actor (rolemodel)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+
+
+}

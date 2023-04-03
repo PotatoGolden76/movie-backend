@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'movies_api',
     'directors_api',
     'actors_api',
+    'roles_api',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
