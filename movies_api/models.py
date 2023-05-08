@@ -12,6 +12,7 @@ class MovieModel(models.Model):
     rating = models.IntegerField(default=1,
         validators=[MaxValueValidator(10), MinValueValidator(1)])
     director = models.ForeignKey('directors_api.DirectorModel', on_delete=models.CASCADE, null=True)
+    synopsis = models.TextField(blank=True, null=True)
 
     class Meta:
         db_table = "movies"
