@@ -1,1 +1,1 @@
-Demo backend written in Django, using django-rest-framework. This backend was written as a univeristy assignment.
+Demo backend written in Django, using django-rest-framework. This backend was written as a univeristy assignment, hosted on Google Cloud, and connected to a PostgreSQL server hosted on the same platform. The backend has been stress tested with ~10 million database entries and works flawlessly, including proper request pagination.
